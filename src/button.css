@@ -1,0 +1,57 @@
+:root{
+    --primary-color: #656b6d;
+    --text-color: #000000;
+}
+
+.hollow-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+
+    /* For the hollow look */
+    border: 2px solid var(--primary-color);
+    background-color: white;
+
+    color: var (--primary-color);
+
+    /* Giving it a smooth transition */
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+}
+
+.hollow-button:hover,
+.hollow-button:active{
+    /*  HOVER STATE */
+    /* Invert The colors */
+    background-color: var(--primary-color);
+    color: var(--text-color); 
+    border-color: blue;
+}
+
+.filled-button{
+    /*  DEFAULT (FILLED) STATE */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+
+    /* Attributes of the filled look */
+    border: 2px solid var(--primary-color);
+    background-color: black;
+    color: white;
+
+    /* Giving it a smooth transition */
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.filled-button:hover,
+.filled-button:active{
+    background-color: rgb(44, 43, 43);
+    color: rgb(180, 164, 164);
+
+    /* Keep the border or change later, yenye itakaa smart */
+    border-color: blue;
+}

@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
+import { Button } from '@/components/ui/button.tsx';
+// import { useNavigate } from 'react-router-dom';
 
 interface NavItem {
 label: string;
@@ -19,13 +19,13 @@ const navItems: NavItem[] = [
 
 export default function NavigationBar() {
 const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-const navigate = useNavigate(); //lets us navigate programmatically
-const handleLoginClick = () => {
-    navigate('/')
-};
-const handleSignupClick = () => {
-    navigate('/')
-};
+// const navigate = useNavigate(); //lets us navigate programmatically
+// const handleLoginClick = () => {
+//     navigate('/')
+// };
+// const handleSignupClick = () => {
+//     navigate('/')
+// };
 const logoStyle = {
     fontFamily: 'Inter, sans-serif',
     fontWeight: 'bold',
@@ -34,7 +34,7 @@ const logoStyle = {
 };
 return (
 <>
-    <nav className="bg-[#18019e] shadow-lg sticky top-0 z-50">
+    <nav className="bg-[#18019e] shadow-xl sticky top-0 z-50 rounded-lg m-1 ">
     <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
         {/* ---- LEFT: Logo + Desktop links ---- */}
@@ -49,7 +49,7 @@ return (
                 <a
                 key={item.label}
                 href={item.href}
-                className="text-gray-700 dark:text-gray-200 hover:text-green-600 dark:hover:text-green-700 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                className="text-gray-200 dark:text-gray-200 hover:text-blue-400 dark:hover:text-green-700 px-3 py-2 text-sm font-medium transition-colors duration-200"
                 >
                 {item.label}
                 </a>
@@ -59,10 +59,10 @@ return (
 
         {/* ---- RIGHT: Auth buttons (desktop) ---- */}
         <div className="hidden md:flex items-center gap-3">
-            <Button variant="outline" className="hollow-button" onClick={handleLoginClick}>
+            <Button variant="outline" className="hollow-button">
             Login
             </Button>
-            <Button variant='outline' className='filled-button' onClick={handleSignupClick}>Sign Up</Button>
+            <Button variant='outline' className='filled-button'>Sign Up</Button>
         </div>
 
         {/* ---- Mobile menu button ---- */}
