@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import './button.css'
 // import App from '@/App'
-import NavigationBar  from './Client/navbar.tsx'
+import NavigationBar  from './objects/navbar.tsx'
 
 
 createRoot(document.getElementById('render')!).render(
