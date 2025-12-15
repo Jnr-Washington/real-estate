@@ -34,7 +34,7 @@ const logoStyle = {
 };
 return (
 <>
-    <nav className="bg-[#18019e] shadow-xl sticky top-0 z-50 rounded-lg m-1 ">
+    <nav className="bg-[#18019e] shadow-xl sticky top-0 z-50 rounded-lg m-1 overflow-hidden">
     <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
         {/* ---- LEFT: Logo + Desktop links ---- */}
